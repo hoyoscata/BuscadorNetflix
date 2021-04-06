@@ -1,8 +1,43 @@
-<div id="observablehq-b21874d2"></div>
+<div id="observablehq-Tit-5b774620"></div>
+<div id="observablehq-Hits-5b774620"></div>
+<div id="observablehq-Type-5b774620"></div>
+<div id="observablehq-viewof-tvOrMovie-5b774620"></div>
+<div id="observablehq-Rating-5b774620"></div>
+<div id="observablehq-viewof-selectedRating-5b774620"></div>
+<div id="observablehq-STitle-5b774620"></div>
+<div id="observablehq-viewof-queryTitle-5b774620"></div>
+<div id="observablehq-SDirector-5b774620"></div>
+<div id="observablehq-viewof-queryDirector-5b774620"></div>
+<div id="observablehq-SCast-5b774620"></div>
+<div id="observablehq-viewof-queryCast-5b774620"></div>
+<div id="observablehq-SCountry-5b774620"></div>
+<div id="observablehq-viewof-queryCountry-5b774620"></div>
+<div id="observablehq-SRelease-5b774620"></div>
+<div id="observablehq-viewof-queryReleaseYear-5b774620"></div>
+<div id="observablehq-RTable-5b774620"></div>
 <p>Credit: <a href="https://observablehq.com/d/f74bcd68b60b6b02">Tarea Buscador Netflix by hoyoscata</a></p>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
 import define from "https://api.observablehq.com/d/f74bcd68b60b6b02.js?v=3";
-new Runtime().module(define, Inspector.into("#observablehq-b21874d2"));
+new Runtime().module(define, name => {
+  if (name === "Tit") return new Inspector(document.querySelector("#observablehq-Tit-5b774620"));
+  if (name === "Hits") return new Inspector(document.querySelector("#observablehq-Hits-5b774620"));
+  if (name === "Type") return new Inspector(document.querySelector("#observablehq-Type-5b774620"));
+  if (name === "viewof tvOrMovie") return new Inspector(document.querySelector("#observablehq-viewof-tvOrMovie-5b774620"));
+  if (name === "Rating") return new Inspector(document.querySelector("#observablehq-Rating-5b774620"));
+  if (name === "viewof selectedRating") return new Inspector(document.querySelector("#observablehq-viewof-selectedRating-5b774620"));
+  if (name === "STitle") return new Inspector(document.querySelector("#observablehq-STitle-5b774620"));
+  if (name === "viewof queryTitle") return new Inspector(document.querySelector("#observablehq-viewof-queryTitle-5b774620"));
+  if (name === "SDirector") return new Inspector(document.querySelector("#observablehq-SDirector-5b774620"));
+  if (name === "viewof queryDirector") return new Inspector(document.querySelector("#observablehq-viewof-queryDirector-5b774620"));
+  if (name === "SCast") return new Inspector(document.querySelector("#observablehq-SCast-5b774620"));
+  if (name === "viewof queryCast") return new Inspector(document.querySelector("#observablehq-viewof-queryCast-5b774620"));
+  if (name === "SCountry") return new Inspector(document.querySelector("#observablehq-SCountry-5b774620"));
+  if (name === "viewof queryCountry") return new Inspector(document.querySelector("#observablehq-viewof-queryCountry-5b774620"));
+  if (name === "SRelease") return new Inspector(document.querySelector("#observablehq-SRelease-5b774620"));
+  if (name === "viewof queryReleaseYear") return new Inspector(document.querySelector("#observablehq-viewof-queryReleaseYear-5b774620"));
+  if (name === "RTable") return new Inspector(document.querySelector("#observablehq-RTable-5b774620"));
+  return ["selectedMovies"].includes(name);
+});
 </script>
